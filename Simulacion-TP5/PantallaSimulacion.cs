@@ -1438,6 +1438,43 @@ namespace Simulacion_TP5
             return "FAC3";
 
         }
+        
+        
+        //TP6--METODOS NECESARIOS
+        public int probabilidad_log()
+        {
+            int E = 0;
+            double rnd = Math.Round(RND.NextDouble(), 4);
+            if (rnd > 0.00 && rnd < 0.49) { return E = 100; }
+            else if (rnd > 0.50 && rnd < 0.79) { return E = 70; }
+                else { return E = 50; }
+        }
+
+        //ESTE METODO HARIA LO QUE HACEMOS SIEMPRE EN EXCEL CON LAS ECUACIONES DIFERENCIALES
+        public double ecuacion_diferencial_log(int E)
+        {
+            double alfa = 0.099;
+            double t = 0;
+            double h = 0.5;
+            double T = 0.5;
+
+            for (int i = 0; i<E; i++)
+            {
+                double ec_diferencial = alfa * T;
+                t = t + h;
+                T = T + ec_diferencial * h;
+            }
+            return t; //ES EL TIEMPO t EN EXCEL , en donde supera a E. Es el que vas a usar para frenar el reloj(purgar)
+        }
+
+        //METODO INESTABLE, TE VA A DEVOLVER EL TIEMPO PARA QUE FRENES LOS FINES DE ATENCION EN UNA CAJA. 
+        public double inestable(double T)
+        {
+            int E = probabilidad_log(); // DEVUELVE EL VALOR DE LA PROBABILIDAD, PUEDE SER 100 , 70 o 50
+            double Tiempo = ecuacion_diferencial_log(E);
+            return Tiempo + 2; //RETORNA EL NUEVO TIEMPO RELOJ PARA DESBLOQUEAR EL EVENTO. 
+        }
+
 
 
 
