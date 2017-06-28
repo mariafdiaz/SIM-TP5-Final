@@ -22,6 +22,7 @@ namespace Simulacion_TP5
         private Caja3 caja3;
         private Caja2 caja2;
         private CajaR cajaR;
+        private Logs logs;
         private int contClientesEntrantes; // sirve para ir numerando los clientes
         
 
@@ -40,6 +41,8 @@ namespace Simulacion_TP5
         caja3 = new Caja3();
         caja2 = new Caja2();
         cajaR = new CajaR();
+        logs = new Logs();
+            
         dt = new DataTable();
             contClientesEntrantes = 0;
             if (validar_campos())
@@ -328,6 +331,8 @@ namespace Simulacion_TP5
                             if (cajaR.finAtencion != -1) { dr1["FinTiempo AtencíonCR"] = cajaR.finAtencion; }
                             if (caja2.finAtencion != -1) { dr1["FinTiempo AtencionC2"] = caja2.finAtencion; }
                             if (caja3.finAtencion != -1) { dr1["\nFinTiempoAC3"] = caja3.finAtencion; }
+                            if (logs.IniciotiempoPurga != -1) { dr1["*Logs* InicioTiempo Purga Caja3"] = logs.IniciotiempoPurga; }
+                            if (logs.FinTiempoPurga != -1) { dr1["*Logs* FinTiempo Purga Caja3"] = logs.FinTiempoPurga; }
                             //Servers
 
                             dr1["*Verduleria* Estado"] = verduleria.Estado;
@@ -549,6 +554,8 @@ namespace Simulacion_TP5
                                 if (cajaR.finAtencion != -1) { dr2["FinTiempo AtencíonCR"] = cajaR.finAtencion; }
                                 if (caja2.finAtencion != -1) { dr2["FinTiempo AtencionC2"] = caja2.finAtencion; }
                                 if (caja3.finAtencion != -1) { dr2["\nFinTiempoAC3"] = caja3.finAtencion; }
+                                if (logs.IniciotiempoPurga != -1) { dr2["*Logs* InicioTiempo Purga Caja3"] = logs.IniciotiempoPurga; }
+                                if (logs.FinTiempoPurga != -1) { dr2["*Logs* FinTiempo Purga Caja3"] = logs.FinTiempoPurga; }
                                 dr2["ContClientes Atendidos"] = super.CantClientesAtendidos;
                                 dr2["*Verduleria* Estado"] = verduleria.Estado;
                                 dr2["*Carniceria* Estado"] = carniceria.Estado;
@@ -705,6 +712,8 @@ namespace Simulacion_TP5
                                 if (cajaR.finAtencion != -1) { dr3["FinTiempo AtencíonCR"] = cajaR.finAtencion; }
                                 if (caja2.finAtencion != -1) { dr3["FinTiempo AtencionC2"] = caja2.finAtencion; }
                                 if (caja3.finAtencion != -1) { dr3["\nFinTiempoAC3"] = caja3.finAtencion; }
+                                if (logs.IniciotiempoPurga != -1) { dr3["*Logs* InicioTiempo Purga Caja3"] = logs.IniciotiempoPurga; }
+                                if (logs.FinTiempoPurga != -1) { dr3["*Logs* FinTiempo Purga Caja3"] = logs.FinTiempoPurga; }
                                 dr3["ContClientes Atendidos"] = super.CantClientesAtendidos;
                                 dr3["*Verduleria* Estado"] = verduleria.Estado;
                                 dr3["*Carniceria* Estado"] = carniceria.Estado;
@@ -963,6 +972,8 @@ namespace Simulacion_TP5
                                 if (cajaR.finAtencion != -1) { dr5["FinTiempo AtencíonCR"] = cajaR.finAtencion; }
                                 if (caja2.finAtencion != -1) { dr5["FinTiempo AtencionC2"] = caja2.finAtencion; }
                                 if (caja3.finAtencion != -1) { dr5["\nFinTiempoAC3"] = caja3.finAtencion; }
+                                if (logs.IniciotiempoPurga != -1) { dr5["*Logs* InicioTiempo Purga Caja3"] = logs.IniciotiempoPurga; }
+                                if (logs.FinTiempoPurga != -1) { dr5["*Logs* FinTiempo Purga Caja3"] = logs.FinTiempoPurga; }
                                 dr5["ContClientes Atendidos"] = super.CantClientesAtendidos;
                                 dr5["*Verduleria* Estado"] = verduleria.Estado;
                                 dr5["*Carniceria* Estado"] = carniceria.Estado;
@@ -1188,6 +1199,8 @@ namespace Simulacion_TP5
                                 if (cajaR.finAtencion != -1) { dr4["FinTiempo AtencíonCR"] = cajaR.finAtencion; }
                                 if (caja2.finAtencion != -1) { dr4["FinTiempo AtencionC2"] = caja2.finAtencion; }
                                 if (caja3.finAtencion != -1) { dr4["\nFinTiempoAC3"] = caja3.finAtencion; }
+                                if (logs.IniciotiempoPurga != -1) { dr4["*Logs* InicioTiempo Purga Caja3"] = logs.IniciotiempoPurga; }
+                                if (logs.FinTiempoPurga != -1) { dr4["*Logs* FinTiempo Purga Caja3"] = logs.FinTiempoPurga; }
                                 dr4["ContClientes Atendidos"] = super.CantClientesAtendidos;
                             dr4["*Verduleria* Estado"] = verduleria.Estado;
                             dr4["*Carniceria* Estado"] = carniceria.Estado;
@@ -1247,6 +1260,8 @@ namespace Simulacion_TP5
                                 if (cajaR.finAtencion != -1) { dr6["FinTiempo AtencíonCR"] = cajaR.finAtencion; }
                                 if (caja2.finAtencion != -1) { dr6["FinTiempo AtencionC2"] = caja2.finAtencion; }
                                 if (caja3.finAtencion != -1) { dr6["\nFinTiempoAC3"] = caja3.finAtencion; }
+                                if (logs.IniciotiempoPurga != -1) { dr6["*Logs* InicioTiempo Purga Caja3"] = logs.IniciotiempoPurga; }
+                                if (logs.FinTiempoPurga != -1) { dr6["*Logs* FinTiempo Purga Caja3"] = logs.FinTiempoPurga; }
                                 dr6["ContClientes Atendidos"] = super.CantClientesAtendidos;
                                 dr6["*Verduleria* Estado"] = verduleria.Estado;
                                 dr6["*Carniceria* Estado"] = carniceria.Estado;
@@ -1300,7 +1315,9 @@ namespace Simulacion_TP5
                                 if (cajaR.finAtencion != -1) { dr7["FinTiempo AtencíonCR"] = cajaR.finAtencion; }
                                 if (caja2.finAtencion != -1) { dr7["FinTiempo AtencionC2"] = caja2.finAtencion; }
                                 if (caja3.finAtencion != -1) { dr7["\nFinTiempoAC3"] = caja3.finAtencion; }
-                               
+                                if (logs.IniciotiempoPurga != -1) { dr7["*Logs* InicioTiempo Purga Caja3"] = logs.IniciotiempoPurga; }
+                                if (logs.FinTiempoPurga != -1) { dr7["*Logs* FinTiempo Purga Caja3"] = logs.FinTiempoPurga; }
+
                                 dr7["ContClientes Atendidos"] = super.CantClientesAtendidos;
                                 dr7["*Verduleria* Estado"] = verduleria.Estado;
                                 dr7["*Carniceria* Estado"] = carniceria.Estado;
@@ -1324,57 +1341,158 @@ namespace Simulacion_TP5
                             }
                         case "FACR"://Fin Atencion Caja R 
                             {
-                                DataRow dr8 = dt.NewRow();
-                                dr8["Evento"] = "Fin atenc Caja R";
-                                dr8["Reloj"] = Math.Round(super.Reloj, 4);
 
-                                if (cajaR.Cola.Count != 0)
+
+                                if (super.estaPurgando == true)
                                 {
-                                    cajaR.clienteSirviendose = cajaR.Cola.Dequeue();
-                                    cajaR.finAtencion = Math.Round(cajaR.clienteSirviendose.cantArt * 0.333 + 1 + super.Reloj, 4);
-                                    dr8["*Atencion CajaRapida* CantArticulos"] = cajaR.clienteSirviendose.cantArt;
-                                    dr8["FinTiempo AtencíonCR"] = cajaR.finAtencion;
+                                    cajaR.finAtencion = logs.FinTiempoPurga+1;
 
                                 }
                                 else
                                 {
-                                    cajaR.Estado = "L";
-                                    cajaR.clienteSirviendose = null;
-                                    cajaR.finAtencion = -1;
+                                    DataRow dr8 = dt.NewRow();
+                                    dr8["Evento"] = "Fin atenc Caja R";
+                                    dr8["Reloj"] = Math.Round(super.Reloj, 4);
 
+                                    if (cajaR.Cola.Count != 0)
+                                    {
+                                        cajaR.clienteSirviendose = cajaR.Cola.Dequeue();
+                                        cajaR.finAtencion = Math.Round(cajaR.clienteSirviendose.cantArt * 0.333 + 1 + super.Reloj, 4);
+                                        dr8["*Atencion CajaRapida* CantArticulos"] = cajaR.clienteSirviendose.cantArt;
+                                        dr8["FinTiempo AtencíonCR"] = cajaR.finAtencion;
+
+                                    }
+                                    else
+                                    {
+                                        cajaR.Estado = "L";
+                                        cajaR.clienteSirviendose = null;
+                                        cajaR.finAtencion = -1;
+
+                                    }
+                                    super.CantClientesAtendidos = super.CantClientesAtendidos + 1;
+                                    dr8["ProxLleg"] = super.ProximaLlegadaCliente;
+                                    //Los fin atencion de los eventos se setean al principio con -1 , Si nunca se escribió un fin Atencion de un server no debe poner nada en Fin tiempo de la fila siguiente
+                                    if (carniceria.finAtencion != -1) { dr8["FinTiempo AtencionC"] = carniceria.finAtencion; }
+                                    if (verduleria.finAtencion != -1) { dr8["FinTiempo AtencionV"] = verduleria.finAtencion; }
+                                    if (panaderia.finAtencion != -1) { dr8["*FinAtencion Panadería*"] = panaderia.finAtencion; }
+                                    if (gondola.finAtencion != -1) { dr8["FinTiempo Atencion Gondola"] = gondola.finAtencion; }
+                                    if (cajaR.finAtencion != -1) { dr8["FinTiempo AtencíonCR"] = cajaR.finAtencion; }
+                                    if (caja2.finAtencion != -1) { dr8["FinTiempo AtencionC2"] = caja2.finAtencion; }
+                                    if (caja3.finAtencion != -1) { dr8["\nFinTiempoAC3"] = caja3.finAtencion; }
+                                    if (logs.IniciotiempoPurga != -1) { dr8["*Logs* InicioTiempo Purga Caja3"] = logs.IniciotiempoPurga; }
+                                    if (logs.FinTiempoPurga != -1) { dr8["*Logs* FinTiempo Purga Caja3"] = logs.FinTiempoPurga; }
+
+                                    dr8["ContClientes Atendidos"] = super.CantClientesAtendidos;
+                                    dr8["*Verduleria* Estado"] = verduleria.Estado;
+                                    dr8["*Carniceria* Estado"] = carniceria.Estado;
+                                    dr8["*Panaderia* Estado"] = panaderia.Estado;
+                                    dr8["*Gondola* Estado"] = gondola.Estado;
+                                    dr8["*CajaRapida* Estado"] = cajaR.Estado;
+                                    dr8["*Caja2* Estado"] = caja2.Estado;
+                                    dr8["*Caja3* Estado"] = caja3.Estado;
+
+
+                                    dr8["\nColaV"] = verduleria.Cola.Count;
+                                    dr8["\nColaC"] = carniceria.Cola.Count;
+                                    dr8["\nColaP"] = panaderia.Cola.Count;
+                                    dr8["\nColaG"] = gondola.Cola.Count;
+                                    dr8["\nColaCR"] = cajaR.Cola.Count;
+                                    dr8["\nColaC2"] = caja2.Cola.Count;
+                                    dr8["\nColaC3"] = caja3.Cola.Count;
+                                    dt.Rows.Add(dr8);
                                 }
-                                super.CantClientesAtendidos = super.CantClientesAtendidos + 1;
-                                dr8["ProxLleg"] = super.ProximaLlegadaCliente;
-                                //Los fin atencion de los eventos se setean al principio con -1 , Si nunca se escribió un fin Atencion de un server no debe poner nada en Fin tiempo de la fila siguiente
-                                if (carniceria.finAtencion != -1) { dr8["FinTiempo AtencionC"] = carniceria.finAtencion; }
-                                if (verduleria.finAtencion != -1) { dr8["FinTiempo AtencionV"] = verduleria.finAtencion; }
-                                if (panaderia.finAtencion != -1) { dr8["*FinAtencion Panadería*"] = panaderia.finAtencion; }
-                                if (gondola.finAtencion != -1) { dr8["FinTiempo Atencion Gondola"] = gondola.finAtencion; }
-                                if (cajaR.finAtencion != -1) { dr8["FinTiempo AtencíonCR"] = cajaR.finAtencion; }
-                                if (caja2.finAtencion != -1) { dr8["FinTiempo AtencionC2"] = caja2.finAtencion; }
-                                if (caja3.finAtencion != -1) { dr8["\nFinTiempoAC3"] = caja3.finAtencion; }
-
-                                
-                                dr8["ContClientes Atendidos"] = super.CantClientesAtendidos;
-                                dr8["*Verduleria* Estado"] = verduleria.Estado;
-                                dr8["*Carniceria* Estado"] = carniceria.Estado;
-                                dr8["*Panaderia* Estado"] = panaderia.Estado;
-                                dr8["*Gondola* Estado"] = gondola.Estado;
-                                dr8["*CajaRapida* Estado"] = cajaR.Estado;
-                                dr8["*Caja2* Estado"] = caja2.Estado;
-                                dr8["*Caja3* Estado"] = caja3.Estado;
-
-
-                                dr8["\nColaV"] = verduleria.Cola.Count;
-                                dr8["\nColaC"] = carniceria.Cola.Count;
-                                dr8["\nColaP"] = panaderia.Cola.Count;
-                                dr8["\nColaG"] = gondola.Cola.Count;
-                                dr8["\nColaCR"] = cajaR.Cola.Count;
-                                dr8["\nColaC2"] = caja2.Cola.Count;
-                                dr8["\nColaC3"] = caja3.Cola.Count;
-                                dt.Rows.Add(dr8);
                                 break;
                             }
+                        case "PURGAR": {
+                                DataRow dr9 = dt.NewRow();
+                                dr9["Evento"] = "PURGA";
+                                dr9["Reloj"] = Math.Round(super.Reloj, 4);
+                                super.estaPurgando = true;
+
+                                if (cajaR.finAtencion != -1) { cajaR.finAtencion = super.Reloj + 20; }//los 20 son de la espera
+
+
+                                dr9["ProxLleg"] = super.ProximaLlegadaCliente;
+                                //Los fin atencion de los eventos se setean al principio con -1 , Si nunca se escribió un fin Atencion de un server no debe poner nada en Fin tiempo de la fila siguiente
+                                if (carniceria.finAtencion != -1) { dr9["FinTiempo AtencionC"] = carniceria.finAtencion; }
+                                if (verduleria.finAtencion != -1) { dr9["FinTiempo AtencionV"] = verduleria.finAtencion; }
+                                if (panaderia.finAtencion != -1) { dr9["*FinAtencion Panadería*"] = panaderia.finAtencion; }
+                                if (gondola.finAtencion != -1) { dr9["FinTiempo Atencion Gondola"] = gondola.finAtencion; }
+                                if (cajaR.finAtencion != -1) { dr9["FinTiempo AtencíonCR"] = cajaR.finAtencion; }
+                                if (caja2.finAtencion != -1) { dr9["FinTiempo AtencionC2"] = caja2.finAtencion; }
+                                if (caja3.finAtencion != -1) { dr9["\nFinTiempoAC3"] = caja3.finAtencion; }
+                                if (logs.IniciotiempoPurga != -1) { dr9["*Logs* InicioTiempo Purga Caja3"] = logs.IniciotiempoPurga; }
+                                if (logs.FinTiempoPurga != -1) { dr9["*Logs* FinTiempo Purga Caja3"] = logs.FinTiempoPurga; }
+
+                                dr9["ContClientes Atendidos"] = super.CantClientesAtendidos;
+                                dr9["*Verduleria* Estado"] = verduleria.Estado;
+                                dr9["*Carniceria* Estado"] = carniceria.Estado;
+                                dr9["*Panaderia* Estado"] = panaderia.Estado;
+                                dr9["*Gondola* Estado"] = gondola.Estado;
+                                dr9["*CajaRapida* Estado"] = cajaR.Estado;
+                                dr9["*Caja2* Estado"] = caja2.Estado;
+                                dr9["*Caja3* Estado"] = caja3.Estado;
+
+
+                                dr9["\nColaV"] = verduleria.Cola.Count;
+                                dr9["\nColaC"] = carniceria.Cola.Count;
+                                dr9["\nColaP"] = panaderia.Cola.Count;
+                                dr9["\nColaG"] = gondola.Cola.Count;
+                                dr9["\nColaCR"] = cajaR.Cola.Count;
+                                dr9["\nColaC2"] = caja2.Cola.Count;
+                                dr9["\nColaC3"] = caja3.Cola.Count;
+
+                                logs.IniciotiempoPurga = -1;
+
+                                dt.Rows.Add(dr9);
+                                break; }
+                        case "DESBLOQ": {
+                                DataRow dr10 = dt.NewRow();
+                                dr10["Evento"] = "ESTABILIZACION";
+                                dr10["Reloj"] = Math.Round(super.Reloj, 4);
+                                super.estaPurgando = false;
+
+                                logs.rnd = Math.Round(RND.NextDouble(), 4);
+                                logs.E = probabilidad_log(logs.rnd);
+                                logs.IniciotiempoPurga = ecuacion_diferencial_log(logs.E) + super.Reloj;
+                                logs.FinTiempoPurga = FinTiempoLogs(logs.E) + super.Reloj;
+                                
+                                dr10["*Logs* RND"] = logs.rnd;
+                                dr10["*Logs* Espacio ocupado"] = logs.E;
+                                dr10["*Logs* InicioTiempo Purga Caja3"] = logs.IniciotiempoPurga;
+                                dr10["*Logs* FinTiempo Purga Caja3"] = logs.FinTiempoPurga;
+
+                                dr10["ProxLleg"] = super.ProximaLlegadaCliente;
+                                //Los fin atencion de los eventos se setean al principio con -1 , Si nunca se escribió un fin Atencion de un server no debe poner nada en Fin tiempo de la fila siguiente
+                                if (carniceria.finAtencion != -1) { dr10["FinTiempo AtencionC"] = carniceria.finAtencion; }
+                                if (verduleria.finAtencion != -1) { dr10["FinTiempo AtencionV"] = verduleria.finAtencion; }
+                                if (panaderia.finAtencion != -1) { dr10["*FinAtencion Panadería*"] = panaderia.finAtencion; }
+                                if (gondola.finAtencion != -1) { dr10["FinTiempo Atencion Gondola"] = gondola.finAtencion; }
+                                if (cajaR.finAtencion != -1) { dr10["FinTiempo AtencíonCR"] = cajaR.finAtencion; }
+                                if (caja2.finAtencion != -1) { dr10["FinTiempo AtencionC2"] = caja2.finAtencion; }
+                                if (caja3.finAtencion != -1) { dr10["\nFinTiempoAC3"] = caja3.finAtencion; }
+                                if (logs.IniciotiempoPurga != -1) { dr10["*Logs* InicioTiempo Purga Caja3"] = logs.IniciotiempoPurga; }
+                                if (logs.FinTiempoPurga != -1) { dr10["*Logs* FinTiempo Purga Caja3"] = logs.FinTiempoPurga; }
+
+                                dr10["ContClientes Atendidos"] = super.CantClientesAtendidos;
+                                dr10["*Verduleria* Estado"] = verduleria.Estado;
+                                dr10["*Carniceria* Estado"] = carniceria.Estado;
+                                dr10["*Panaderia* Estado"] = panaderia.Estado;
+                                dr10["*Gondola* Estado"] = gondola.Estado;
+                                dr10["*CajaRapida* Estado"] = cajaR.Estado;
+                                dr10["*Caja2* Estado"] = caja2.Estado;
+                                dr10["*Caja3* Estado"] = caja3.Estado;
+
+
+                                dr10["\nColaV"] = verduleria.Cola.Count;
+                                dr10["\nColaC"] = carniceria.Cola.Count;
+                                dr10["\nColaP"] = panaderia.Cola.Count;
+                                dr10["\nColaG"] = gondola.Cola.Count;
+                                dr10["\nColaCR"] = cajaR.Cola.Count;
+                                dr10["\nColaC2"] = caja2.Cola.Count;
+                                dr10["\nColaC3"] = caja3.Cola.Count;
+                                dt.Rows.Add(dr10);
+                                break; }
                         default:
                             MessageBox.Show("Hubo un error en el switch de Eventos");
                             break;
@@ -1419,7 +1537,7 @@ namespace Simulacion_TP5
 
         private String DeterminarEventoSiguiente()
         {
-            List<double> menorTiempo = new List<double> { carniceria.finAtencion, verduleria.finAtencion, super.ProximaLlegadaCliente, gondola.finAtencion, caja2.finAtencion, panaderia.finAtencion, caja3.finAtencion, cajaR.finAtencion };
+            List<double> menorTiempo = new List<double> { carniceria.finAtencion, verduleria.finAtencion, super.ProximaLlegadaCliente, gondola.finAtencion, caja2.finAtencion, panaderia.finAtencion, caja3.finAtencion, cajaR.finAtencion ,logs.IniciotiempoPurga,logs.FinTiempoPurga};
             //remuevo todos los -1
             menorTiempo.RemoveAll(item => item == -1);
             //busco el menor tiempo
@@ -1428,6 +1546,8 @@ namespace Simulacion_TP5
             super.Reloj = menorTiempoEvento;//ASIGNO A RELOJ
            
             if (menorTiempoEvento == carniceria.finAtencion) { return "FAC"; }
+            if (menorTiempoEvento == logs.IniciotiempoPurga) {return "PURGAR"; }
+            if (menorTiempoEvento == logs.FinTiempoPurga) {return "DESBLOQ"; }
             if (menorTiempoEvento == verduleria.finAtencion) { return "FAV"; }
             if(menorTiempoEvento == panaderia.finAtencion) { return "FAP"; }
             if (menorTiempoEvento == gondola.finAtencion) { return "FAG"; }
@@ -1441,24 +1561,24 @@ namespace Simulacion_TP5
         
         
         //TP6--METODOS NECESARIOS
-        public int probabilidad_log()
+        public int probabilidad_log(double rnd)
         {
             int E = 0;
-            double rnd = Math.Round(RND.NextDouble(), 4);
+            rnd = Math.Round(rnd, 4);
             if (rnd > 0.00 && rnd < 0.49) { return E = 100; }
             else if (rnd > 0.50 && rnd < 0.79) { return E = 70; }
                 else { return E = 50; }
         }
 
         //ESTE METODO HARIA LO QUE HACEMOS SIEMPRE EN EXCEL CON LAS ECUACIONES DIFERENCIALES
-        public double ecuacion_diferencial_log(int E)
+        public double ecuacion_diferencial_log(double E)
         {
             double alfa = 0.099;
             double t = 0;
             double h = 0.5;
             double T = 0.5;
 
-            for (int i = 0; i<E; i++)
+            for (int i = 0;T<E; i++)
             {
                 double ec_diferencial = alfa * T;
                 t = t + h;
@@ -1468,11 +1588,8 @@ namespace Simulacion_TP5
         }
 
         //METODO INESTABLE, TE VA A DEVOLVER EL TIEMPO PARA QUE FRENES LOS FINES DE ATENCION EN UNA CAJA. 
-        public double inestable(double T)
-        {
-            int E = probabilidad_log(); // DEVUELVE EL VALOR DE LA PROBABILIDAD, PUEDE SER 100 , 70 o 50
-            double Tiempo = ecuacion_diferencial_log(E);
-            return Tiempo + 2; //RETORNA EL NUEVO TIEMPO RELOJ PARA DESBLOQUEAR EL EVENTO. 
+        public double FinTiempoLogs(double E)
+        { return ecuacion_diferencial_log(E) + 20; //RETORNA EL NUEVO TIEMPO RELOJ PARA DESBLOQUEAR EL EVENTO. 
         }
 
 
@@ -1493,6 +1610,64 @@ namespace Simulacion_TP5
             txt_desde.Text = "0";
             txt_hasta.Text = "200";
         }
+
+
+        private void iniciarPrimeraFila()
+        {
+            DataRow dr = dt.NewRow();
+            super.Reloj = 0.0;
+            super.AleatorioLlegadaCliente = super.generarAleatorio();
+            super.LlegadaCliente = super.generarPoisson(0.5, super.AleatorioLlegadaCliente);
+            super.ProximaLlegadaCliente = super.Reloj + super.LlegadaCliente;
+            super.EventoSiguiente = "LLC";
+
+            carniceria.finAtencion = -1;
+            verduleria.finAtencion = -1;
+            panaderia.finAtencion = -1;
+            gondola.finAtencion = -1;
+            caja3.finAtencion = -1;
+            caja2.finAtencion = -1;
+            cajaR.finAtencion = -1;
+
+
+
+
+            super.CantClientesAtendidos = 0;
+            //COLUMNA LLEGADA CLIENTE//
+            dr["Reloj"] = super.Reloj;
+            dr["*Llegada cliente* RND"] = super.AleatorioLlegadaCliente;
+            dr["TiempoLleg"] = super.LlegadaCliente;
+            dr["ProxLleg"] = super.ProximaLlegadaCliente;
+
+
+            //Verduleria
+            string[] objetos = { "Verduleria", "Carniceria", "Panaderia", "Gondola", "CajaRapida", "Caja2", "Caja3" };
+            string[] objetosLetra = { "V", "C", "P", "G", "CR", "C2", "C3" };
+            foreach (string item in objetos)
+            {
+                dr["*" + item + "* Estado"] = "L";
+            }
+            foreach (string item in objetosLetra)
+            {
+                dr["\nCola" + item] = 0;
+            }
+
+            //ContClientes Atendidos
+            dr["ContClientes Atendidos"] = 0;
+            //LOGICA LOGS
+            logs.rnd = Math.Round(RND.NextDouble(), 4);
+            logs.E = probabilidad_log(logs.rnd);
+            logs.IniciotiempoPurga = ecuacion_diferencial_log(logs.E);
+            logs.FinTiempoPurga = FinTiempoLogs(logs.E);
+            super.estaPurgando = false;
+            dr["*Logs* RND"] = logs.rnd;
+            dr["*Logs* Espacio ocupado"] = logs.E;
+            dr["*Logs* InicioTiempo Purga Caja3"] = logs.IniciotiempoPurga;
+            dr["*Logs* FinTiempo Purga Caja3"] = logs.FinTiempoPurga;
+            dt.Rows.Add(dr);
+
+        }
+
         private Boolean validar_campos() // para validar que los valores de los campos del form esten bien ingresados
         {
             if (txt_horas.Text == "")
@@ -1595,6 +1770,11 @@ namespace Simulacion_TP5
             dgv_simulacion.Columns[36].DefaultCellStyle.BackColor = caja3;
             //contador
             dgv_simulacion.Columns[37].DefaultCellStyle.BackColor = Color.Gainsboro;
+            //inestable
+            dgv_simulacion.Columns[38].DefaultCellStyle.BackColor = Color.IndianRed;
+            dgv_simulacion.Columns[39].DefaultCellStyle.BackColor = Color.IndianRed;
+            dgv_simulacion.Columns[40].DefaultCellStyle.BackColor = Color.IndianRed;
+            dgv_simulacion.Columns[41].DefaultCellStyle.BackColor = Color.IndianRed;
         }
 
         private void inicializarColumnas()
@@ -1658,89 +1838,14 @@ namespace Simulacion_TP5
             dt.Columns.Add("\nColaC3", typeof(Int32));
             //ContClientes Atendidos
             dt.Columns.Add("ContClientes Atendidos", typeof(Int32));
-
+            //INESTABLE
+            dt.Columns.Add("*Logs* RND", typeof(double));
+            dt.Columns.Add("*Logs* Espacio ocupado", typeof(double));
+            dt.Columns.Add("*Logs* InicioTiempo Purga Caja3", typeof(double));
+            dt.Columns.Add("*Logs* FinTiempo Purga Caja3", typeof(double));
         }
 
         
-        private void iniciarPrimeraFila()
-        {
-            DataRow dr = dt.NewRow();
-            super.Reloj = 0.0;
-            super.AleatorioLlegadaCliente = super.generarAleatorio();
-            super.LlegadaCliente = super.generarPoisson(0.5, super.AleatorioLlegadaCliente);
-            super.ProximaLlegadaCliente = super.Reloj + super.LlegadaCliente;
-            super.EventoSiguiente = "LLC";
-
-            carniceria.finAtencion = -1;
-            verduleria.finAtencion = -1;
-            panaderia.finAtencion = -1;
-            gondola.finAtencion = -1;
-            caja3.finAtencion = -1;
-            caja2.finAtencion = -1;
-            cajaR.finAtencion = -1;
-
-            
-            
-
-            super.CantClientesAtendidos = 0;
-            //COLUMNA LLEGADA CLIENTE//
-            dr["Reloj"] = super.Reloj;
-            dr["*Llegada cliente* RND"] = super.AleatorioLlegadaCliente;
-            dr["TiempoLleg"] = super.LlegadaCliente;
-            dr["ProxLleg"] = super.ProximaLlegadaCliente;
-            
-            
-            
-            // COLUMNA RECORRIDO // 
-            //super.AleatorioRecorrido = RND.Next(100);
-            //super.IDRecorrido = super.generarRecorrido(super.AleatorioRecorrido);
-            //string cadena = super.generarCadenaRecorrido(super.IDRecorrido);
-            //dr["*Recorrido* RND"] = super.AleatorioRecorrido;
-            //dr["Recorrido"] = cadena;
-            //dr["idRec"] = super.IDRecorrido;
-            //// VERDULERIA
-            //dr["*FinAtencion Verduleria* RND"] = ;
-            //dr["Tiempo AtencionV"] = ;
-            //dr["FinTiempo AtencionV"] = ;
-            //// CARNICERIA
-            //dr["*FinAtencion Carniceria* RND"] = ;
-            //dr["Tiempo AtencionC"] = ;
-            //dr["FinTiempo AtencionC"] = ;
-            //// PANADERIA
-            //dr["*FinAtencion Panadería*"] = ;
-            //// GÓNDOLA
-            //dr["*FinAtencion Gondola* RND"] = ;
-            //dr["Cant Articulos Gondola"] = ;
-            //dr["FinTiempo Atencion Gondola"] = ;
-            //// CAJAS
-            //// CAJA Rápida 
-            //dr["*Atencion CajaRapida* CantArticulos"] = ;
-            //dr["FinTiempo AtencíonCR"] = ;
-            //// CAJA 2 
-            //dr["*Atencion  Caja2* CantArticulos"] = ;
-            //dr["FinTiempo AtencionC2"] = ;
-            //// CAJA 3 
-            //dr["*AtencionCaja3* CantArticulos"] = ;
-            //dr["\nFinTiempoAC3"] = ;
-            //OBJETOS
-            //Verduleria
-            string[] objetos = { "Verduleria", "Carniceria", "Panaderia", "Gondola", "CajaRapida", "Caja2", "Caja3" };
-            string[] objetosLetra = { "V", "C", "P", "G", "CR", "C2", "C3" };
-            foreach (string item in objetos)
-            {
-                dr["*" + item + "* Estado"] = "L";
-            }
-            foreach (string item in objetosLetra)
-            {
-                dr["\nCola" + item] = 0;
-            }
-            
-            //ContClientes Atendidos
-            dr["ContClientes Atendidos"] = 0;
-            dt.Rows.Add(dr);
-
-        }
-
 
 
         public PantallaSimulacion()

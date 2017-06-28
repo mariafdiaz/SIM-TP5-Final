@@ -19,7 +19,7 @@ namespace Simulacion_TP5
         private int idRecorrido;
         private string eventoSiguiente;
         private int contCantClientesAtendidos;
-
+        public bool estaPurgando { get; set; }
 
         //GET Y SET//
         public double Reloj { get {return reloj; } set { reloj = value; }} 
@@ -30,8 +30,8 @@ namespace Simulacion_TP5
         public int IDRecorrido { get { return idRecorrido; } set { idRecorrido = value; }}
         public string EventoSiguiente { get { return eventoSiguiente; } set { eventoSiguiente = value; } }
         public int CantClientesAtendidos { get { return contCantClientesAtendidos; } set { contCantClientesAtendidos = value; } }
-
-
+        
+        
 
         //METODOS MATEMATICOS//
         public double generarPoisson(double lambda, double RND)
